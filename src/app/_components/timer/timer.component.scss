@@ -1,0 +1,77 @@
+$focus-color:#dc3545;
+$btn-focus-color: white;
+$unfocus-color: #4596ff;
+$background-color:#f8f9fa;
+
+.pomodoro-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  height: 100%;
+}
+
+.pomodoro-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f9fa;
+}
+
+input{
+  color: #444;
+  text-align: center;
+}
+
+.btn-pomodoro-options{
+  background-color: $focus-color;
+  color: white;
+  margin: 5px;
+  transition: all 0.5s;
+}
+
+.btn-pomodoro-options:hover{
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.btn-pomodoro-options.unfocus{
+  background-color: $unfocus-color;
+  button{
+    background-color: white;
+    color: $unfocus-color;
+  }
+}
+
+.focus{
+  background-color: $focus-color;
+  input{
+    color: #444;
+    text-align: center;
+  }
+  button{
+    background-color: $btn-focus-color;
+    color: $focus-color;
+  }
+}
+
+.focus * , .unfocus *{
+  color: white;
+}
+
+.unfocus{
+  background-color: $unfocus-color;
+  input{
+    color: #444;
+    text-align: center;
+  }
+  button{
+    background-color: $btn-focus-color;
+    color: $unfocus-color;
+  }
+}
+
+
+
+

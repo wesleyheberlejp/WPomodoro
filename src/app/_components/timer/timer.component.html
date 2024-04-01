@@ -1,0 +1,47 @@
+<main class="pomodoro-main" id="Pomodoro-Main">
+  <section class="row">
+
+    <div style="padding: 25px;" class="col-12">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1>POMODORO TIMER</h1>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-12 text-center">
+          <h1 style="font-size: 10rem; color: #e3e3e3;" id="timer" class="mb-3">{{timer}}</h1>
+        </div>
+      </div>
+
+      <form class="mt-2" [formGroup]="formPomarola">
+
+        <div class="row text-center">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="focusInterval">Foco:</label><br>
+                <input type="number" class="form-control" formControlName="focusTime">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="pauseInterval">Pausa:</label><br>
+                <input type="number" class="form-control" formControlName="unFocusTime">
+              </div>
+            </div>
+          </div>
+      </form>
+
+
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <button id="startButton" class="btn btn-pomodoro-options" (click)="iniciaTimer()">Iniciar Foco</button>
+          <button id="pauseButton" class="btn btn-pomodoro-options" (click)="iniciaTimer(false)">Iniciar Descanso</button>
+          <button id="resetButton" class="btn btn-pomodoro-options" (click)="Reset()">Resetar</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
